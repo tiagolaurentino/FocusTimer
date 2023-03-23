@@ -33,7 +33,7 @@ function cronometroGeral() {
          diminui = Number(minutes.innerHTML - 5)
         
        if(seconds <= 0) {
-           seconds = 3
+           seconds = 60
 
            minute.innerHTML = String(minutes - 1 ).padStart(2,'0')
 
@@ -80,7 +80,15 @@ botaoDiminuir.addEventListener('click', function() {
     diminuir()
 })
 
+const btnsAction = document.querySelectorAll('.figura button')
+
 lareira.addEventListener('click', function() {
+
+    btnsAction.forEach(el => {
+        el.classList.remove('btnActive')
+    })
+
+    lareira.classList.add('btnActive')
 
     audio01.pause()
     audio02.pause()
@@ -90,6 +98,13 @@ lareira.addEventListener('click', function() {
 })
 
 cafeteria.addEventListener('click', function(){
+
+    btnsAction.forEach(el => {
+        el.classList.remove('btnActive')
+    })
+
+    cafeteria.classList.add('btnActive')
+
     audio01.pause()
     audio02.pause()
     audio.pause()
@@ -97,6 +112,13 @@ cafeteria.addEventListener('click', function(){
 })
 
 chuva.addEventListener('click', function() {
+
+    btnsAction.forEach(el => {
+        el.classList.remove('btnActive')
+    })
+
+    chuva.classList.add('btnActive')
+
     audio01.pause()
     audio.pause()
     audio03.pause()
@@ -104,6 +126,13 @@ chuva.addEventListener('click', function() {
 })
 
 floresta.addEventListener('click', function( ){
+
+    btnsAction.forEach(el => {
+        el.classList.remove('btnActive')
+    })
+
+    floresta.classList.add('btnActive')
+
     audio02.pause()
     audio.pause()
     audio03.pause()

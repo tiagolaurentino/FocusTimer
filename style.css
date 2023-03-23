@@ -43,9 +43,14 @@ span {
     margin: 3.2rem;
 }
 
-.figura .figura02 {
-    background: #02799D;
-} 
+.btnActive {
+    background: #02799D !important;
+
+}
+
+.btnActive img{
+    filter: invert(100%);
+}
 
 
 .controle button {
@@ -54,6 +59,16 @@ span {
    
 }
 
+.figura button:hover{
+    background: #02799D
+}
+
+.figura button:hover img{
+    filter: invert(100%);
+}
+
 button {
     border: none;
+    cursor: pointer;
 }
+
