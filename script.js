@@ -59,9 +59,7 @@ function diminuir() {
     minute.innerHTML = minutes;
    
 }
- function desligar() {
-
- }
+ 
 
 
 Play.addEventListener('click', function() {
